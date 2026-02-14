@@ -1,0 +1,37 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    background:whitesmoke;
+    color: blue;
+
+}
+.app{
+    color: blueviolet;
+    border-radius: 30px;
+    background: none;
+    margin: 50px;
+.app h1{
+        color: red;
+        margin: ;
+    }
+}
+
+.add-task{
+
+border-radius: 70px; 
+width: 100%;
+}
+.add-task button{
+
+    color: #000;
+    background: #c23232;
+    gap: 5px;
+}
+
+.filters button{
+    margin-top: 20px;
+
+    background: yellow;
+    color: #000;
+    border-radius: 40px;
+}
