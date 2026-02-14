@@ -13,7 +13,7 @@ window.onload = () => {
   displayAllTasks()
   };
 
-// ADD TASK
+
 const addNewTask = () => {
   let input = document.getElementById("taskInput");
   let text = input.value.trim();
@@ -39,29 +39,26 @@ const addNewTask = () => {
   displayAllTasks();
 };
 
-// SAVE STORAGE
 const save = () => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
-// DISPLAY ALL
 const displayAllTasks = () => {
   render(tasks);
 };
 
-// DISPLAY COMPLETED
+
 const displayCompleted = () => {
   let completed = tasks.filter(t => t.completed);
   render(completed);
 };
 
-// DISPLAY PENDING
 const displayPending = () => {
   let pending = tasks.filter(t => !t.completed);
   render(pending);
 };
 
-// RENDER FUNCTION
+
 const render = (array) => {
   let taskList = document.getElementById("taskList");
   taskList.innerHTML = "";
@@ -83,17 +80,18 @@ const render = (array) => {
   });
 };
 
-// DELETE
+
 const deleteTask = (index) => {
   tasks.splice(index, 1);
   save();
   displayAllTasks();
 };
 
-// COMPLETE
+
 const markAsCompleted = (index) => {
   tasks[index].completed = !tasks[index].completed;
   
   save();
   displayAllTasks();
+
 };
